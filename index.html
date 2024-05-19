@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAY88NET-NOHU</title>
+    <link rel="icon" href="./images/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- maquee slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js" integrity="sha512-JCRiGqeZmFnnSl3E68K2QpL8Pwvp4PKAqekg41WWUfjqCnKJEv1DvZJdi76q/XFt6VzZ3V4bCE51NkDQ+dOJKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- splide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+</head>
+<body>
+    <!-- header dropdown when scroll -->
+    <header id="navbar" class="header w-full fixed top-0 left-0 z-50 duration-500">
+        <div class="bg-[#292e3b] tracking-wide p-3.5 z-40 opacity-90">
+            <div class="max-w-[1080px] m-auto flex  justify-center md:justify-between items-center text-white font-semibold relative">
+                <div class="menu-icon absolute left-0 md:hidden text-2xl" onclick="OpenNav()">
+                    <ion-icon name="menu-outline" class="border p-1 rounded-md"></ion-icon>
+                </div>
+    
+                <div onclick="url()" class="logo max-w-[200px] cursor-pointer">
+                    <img src="./images/logo.png">
+                </div>
+
+                <nav id="Nav">
+                    <div class="md:hidden flex justify-end text-3xl p-2 font-bold w-full h-full bg-gray-600 opacity-80" onclick="CloseNav()">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                    <ul class="h-full opacity-100 md:relative absolute top-0 z-50 flex flex-col gap-0 md:gap-5 md:flex-row md:p-5 text-[14.5px] bg-gray-50 text-gray-700 md:text-white md:bg-transparent divide-y divide-slate-200 *:py-4 *:md:py-0 *:md:border-none *:cursor-pointer">
+                        <!-- search -->
+                        <div class="mt-10 md:hidden p-4 border-b">
+                            <div class="border flex justify-center items-center">
+                                <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner" placeholder="Tiềm Kiếm ..." required />
+                                <button class="bg-orange-500 text-white p-2">
+                                    <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- menu -->
+                        <li onclick="url()" class="p-5 md:p-0 mt-20 md:mt-0 hover:text-orange-300 duration-300">TRANG CHỦ</a></li>
+                        <li onclick="url()" class="p-5 md:p-0 hover:text-orange-300 duration-300">KHUYẾN MÃI</a></li>
+                        <li onclick="url()" class="p-5 md:p-0 hover:text-orange-300 duration-300">ĐĂNG KÝ</a></li>
+                        <li onclick="url()" class="p-5 md:p-0 hover:text-orange-300 duration-300">HƯỚNG DẪN</a></li>
+                        <li onclick="url()" class="p-5 md:p-0 hover:text-orange-300 duration-300">LIÊN HỆ</a></li>
+
+                        <!-- icon -->
+                        <div class="md:hidden mt-1">
+                            <div class="p-4">
+                                <button onclick="url()">  <ion-icon name="logo-facebook" class="text-4xl text-blue-800"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="logo-twitter" class="text-2xl p-1 text-white bg-indigo-800 border rounded-full"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="mail-outline" class="text-2xl p-1 text-white bg-gray-900 border rounded-full"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="call-outline" class="text-2xl p-1 text-white bg-green-500 border rounded-full"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="logo-pinterest" class="text-4xl text-red-500"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="logo-youtube" class="text-2xl p-1 text-white bg-red-500 border rounded-full"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="navigate" class="text-2xl p-1 text-white bg-blue-500 border rounded-full"></ion-icon> </button>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+    
+                <div class="text-white hidden md:block text-[13.5px]">
+                    <button onclick="url()" class="bg-red-600 px-4 py-1.5 rounded-full hover:bg-red-800 duration-300">ĐĂNG KÝ</button>
+                    <button onclick="url()" class="bg-cyan-800 px-4 py-1.5 ml-2 rounded-full hover:bg-cyan-950 duration-300">ĐĂNG NHẬP</button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:block bg-white border-b shadow">
+            <div class="max-w-[1080px] m-auto flex items-center m-auto p-1 text-gray-600 text-sm">
+                <span class="w-32">Tin tức mới nhất:</span>
+                <marquee behavior="scroll" direction="left">
+                    <p><span class="inline-block px-1"><img src="./images/bright.png" class="w-4"></span>hay88 chào mừng hội viên mới đến với thế giới giải trí đổi thưởng đẳng cấp châu Á. Chào mừng đến với trang chủ nhà cái uy tín tại Hay88x.com | Link đăng ký, đăng nhập, hỗ trợ thành viên mới chính thức 2024. Nếu trong quá trình Nạp tiền, Rút tiền, Tải app hay88 gặp sự cố. Quý khách vui lòng bấm vào liên hệ để được tư vấn hỗ trợ từ đội ngũ chăm sóc khách hàng của chúng tôi. Chúc quý khách hàng một ngày tốt lành may mắn khi tham gia cá cược trực tuyến.🔥</p>
+                </marquee>
+            </div>
+        </div>
+        <div class="text-white flex gap-3 justify-center font-semibold items-center md:hidden bg-gray-300 text-[13.5px]">
+            <button onclick="url()" class="bg-[#b20000] px-4 py-1.5 rounded-full border">ĐĂNG KÝ</button>
+            <button onclick="url()" class="bg-[#446084] px-4 py-1.5 rounded-full border">ĐĂNG NHẬP</button>
+        </div>
+    </header>
+
+    <!-- header -->
+    <header class="w-full z-50">
+        <div class="bg-[#292e3b] tracking-wide p-3.5 z-40">
+            <div class="max-w-[1080px] m-auto flex justify-center md:justify-between items-center text-white font-semibold relative">
+                <div class="menu-icon absolute left-0 md:hidden text-2xl" onclick="OpenNav()">
+                    <ion-icon name="menu-outline" class="border p-1 rounded-md"></ion-icon>
+                </div>
+    
+                <div onclick="url()" class="logo max-w-[200px] cursor-pointer">
+                    <img src="./images/logo.png">
+                </div>
+
+                <nav id="Nav">
+                    <div class="md:hidden flex justify-end text-3xl p-2 font-bold w-full h-full bg-gray-600 opacity-80" onclick="CloseNav()">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                    <ul class="h-full opacity-100 md:relative absolute top-0 z-50 flex flex-col gap-0 md:gap-5 md:flex-row md:p-5 text-[14.5px] bg-gray-50 text-gray-700 md:text-white md:bg-transparent divide-y divide-slate-200 *:py-4 *:md:py-0 *:md:border-none *:cursor-pointer">
+                        <!-- search -->
+                        <div class="mt-10 md:hidden p-4 border-b">
+                            <div class="border flex justify-center items-center">
+                                <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner" placeholder="Tiềm Kiếm ..." required />
+                                <button class="bg-orange-500 text-white p-2">
+                                    <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- menu -->
+                        <li onclick="url()" class="p-5 md:p-0 mt-20 md:mt-0 hover:text-orange-300 duration-300">TRANG CHỦ</a></li>
+                        <li onclick="url()" class="p-5 md:p-0 hover:text-orange-300 duration-300">KHUYẾN MÃI</a></li>
+                        <li onclick="url()" class="p-5 md:p-0 hover:text-orange-300 duration-300">ĐĂNG KÝ</a></li>
+                        <li onclick="url()" class="p-5 md:p-0 hover:text-orange-300 duration-300">HƯỚNG DẪN</a></li>
+                        <li onclick="url()" class="p-5 md:p-0 hover:text-orange-300 duration-300">LIÊN HỆ</a></li>
+
+                        <!-- icon -->
+                        <div class="md:hidden mt-1">
+                            <div class="p-4">
+                                <button onclick="url()">  <ion-icon name="logo-facebook" class="text-4xl text-blue-800"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="logo-twitter" class="text-2xl p-1 text-white bg-indigo-800 border rounded-full"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="mail-outline" class="text-2xl p-1 text-white bg-gray-900 border rounded-full"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="call-outline" class="text-2xl p-1 text-white bg-green-500 border rounded-full"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="logo-pinterest" class="text-4xl text-red-500"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="logo-youtube" class="text-2xl p-1 text-white bg-red-500 border rounded-full"></ion-icon> </button>
+                                <button onclick="url()">  <ion-icon name="navigate" class="text-2xl p-1 text-white bg-blue-500 border rounded-full"></ion-icon> </button>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+    
+                <div class="text-white hidden md:block text-[13.5px]">
+                    <button onclick="url()" class="bg-red-600 px-4 py-1.5 rounded-full hover:bg-red-800 duration-300">ĐĂNG KÝ</button>
+                    <button onclick="url()" class="bg-cyan-800 px-4 py-1.5 ml-2 rounded-full hover:bg-cyan-950 duration-300">ĐĂNG NHẬP</button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:block bg-white">
+            <div class="max-w-[1080px] m-auto flex items-center m-auto p-1 text-gray-600 text-sm">
+                <span class="w-32">Tin tức mới nhất:</span>
+                <marquee behavior="scroll" direction="left">
+                    <p><span class="inline-block px-1"><img src="./images/bright.png" class="w-4"></span>hay88 chào mừng hội viên mới đến với thế giới giải trí đổi thưởng đẳng cấp châu Á. Chào mừng đến với trang chủ nhà cái uy tín tại Hay88x.com | Link đăng ký, đăng nhập, hỗ trợ thành viên mới chính thức 2024. Nếu trong quá trình Nạp tiền, Rút tiền, Tải app hay88 gặp sự cố. Quý khách vui lòng bấm vào liên hệ để được tư vấn hỗ trợ từ đội ngũ chăm sóc khách hàng của chúng tôi. Chúc quý khách hàng một ngày tốt lành may mắn khi tham gia cá cược trực tuyến.🔥</p>
+                </marquee>
+            </div>
+        </div>
+        <div class="text-white flex gap-3 justify-center font-semibold items-center md:hidden bg-gray-300 text-[13.5px]">
+            <button onclick="url()" class="bg-[#b20000] px-4 py-1.5 rounded-full border">ĐĂNG KÝ</button>
+            <button onclick="url()" class="bg-[#446084] px-4 py-1.5 rounded-full border">ĐĂNG NHẬP</button>
+        </div>
+    </header>
+    
+    <!-- main -->
+    <div class="main p-4 mt-5">
+        <div class="flex flex-col gap-5 text-gray-500 tracking-wide leading-7">
+            <div class="grid sm:grid-cols-3 gap-3 px-10 sm:px-0">
+                <a href="#"><img src="./images/dangky.png"></a>
+                <a href="#"><img src="./images/nhancode.png"></a>
+                <a href="#"><img src="./images/khuyenmai.png"></a>
+            </div>
+           
+            <span class="text-3xl text-gray-600 font-bold text-center mt-5">Nổ hũ – Thiên đường game cá cược đẳng cấp nhất 2024</span>
+            <i><span class="font-semibold text-gray-600">Nổ hủ Hay88</span> là một trò chơi cá cược hấp dẫn mang lại cho người chơi những trải nghiệm giải trí đỉnh cao với tổng cộng hơn 3.000 trò chơi, đa dạng nhiều thể loại là một điểm nổi bật là điểm đến lí tưởng cho những tay chơi cá cược siêu đỉnh.</i>
+            <span class="text-2xl text-gray-600 font-bold">Thế nào là Nổ hủ?</span>
+            <div class="flex justify-center items-center"><img src="./images/pic1.jpg"></div>
+            <p>Nổ hủ hay còn một cái tên khác là Slot game, một trò chơi đã quá quen thuộc đối với các game thủ. Một tựa game chứa đầy sự hấp dẫn thu hút được đông đảo người chơi.</p>
+            <span class="text-2xl text-gray-600 font-bold">Ưu điểm nổi bật có tại Nổ hủ Hay88</span>
+            <div class="flex justify-center items-center"><img src="./images/pic2.jpg"></div>
+            <ul class="list-disc px-4 *:mt-3">
+                <li>Ưu đãi vô vàn với tỉ lệ đổi thưởng cao như thẻ cào, điện thoại,….Đây là điểm mạnh nhất để lôi kéo thu hút người chơi đến với Nổ hủ Hay88. Khiến cho người chơi thích thú và người chơi có nhiều lựa chọn các ưu đãi để tăng thêm lợi nhuận cho mình.</li>
+                <li>Nhà cái cung cấp cho người chơi đồ họa rõ nét và âm thanh sống động. Người chơi sẽ trải nghiệm một hành trình chân thực và cuốn hút, đem lại cho người chơi những giây phút giải trí và sự thỏa mãn không giới hạn.</li>
+                <li>Jackpot trong game nổ hũ Hay88 tạo ra cơ hội cho người chơi có thể nhanh chóng đổi đời .Người chơi chỉ cần quay một lần nổ hũ Jackpot, thì một phần thưởng siêu khủng đang đến với người chơi đó.</li>
+                <li>Cổng game Nổ hủ Hay88 được đánh giá cao về sự đa dạng của cổng game, quy mô đa dạng trên nhiều lĩnh vực. Tại đây người chơi thỏa thích lựa chọn để trải nghiệm những ưu điểm nổi bật có ở Nổ hủ Hay88.</li>
+            </ul>
+            <span class="text-2xl text-gray-600 font-bold">Luật chơi siêu dễ của Nổ hủ Hay88</span>
+            <div class="flex justify-center items-center"><img src="./images/pic3.jpg"></div>
+            <p>Luật chơi siêu dễ dàng. Bạn chỉ cần đặt cược một mức tiền nào đó rồi nhấn quay và chờ đợi kết quả. Sau đây sẽ là nội dung của luật chơi giúp bạn hiểu rõ hơn.</p>
+            <ul class="list-disc px-4 *:mt-3">
+                <li>Spin: Đây là nút quay sau khi bạn đưa ra mức cược của mình. Đây là bước quan trọng nhất.</li>
+                <li>Nút (+) và (-): Đây là nút tăng giảm mức cược của bạn. Bạn điều chỉnh nó để phù hợp với mức tiền bạn đang có.</li>
+                <li>Payline: Khi bạn tạo ra 3-5 biểu tượng giống nhau, phần thưởng sẽ đến với bạn. Mỗi trò chơi tại đây sẽ có tỉ lệ trả thưởng khác nhau.</li>
+                <li>Auto Spin: Tương tự như nút Spin nhưng ở đây nó sẽ là nút quay liên tiếp, bạn không cần phải nhấn từng đợt mà nó sẽ tự quay cho bạn.</li>
+            </ul>
+            <span class="text-2xl text-gray-600 font-bold">Cách thức tham gia Nổ hủ Hay88</span>
+            <div class="flex justify-center items-center"><img src="./images/pic4.jpg"></div>
+            <p>Để  tham gia Nổ hủ Hay88 một cách nhanh chóng và hiệu quả người chơi theo dõi nội dung sau đây:</p>
+            <p class="font-semibold text-gray-600">Đăng kí Hay88</p>
+            <p>Thủ tục để đăng ký game siêu đơn giản và dễ dàng với những bước sau:</p>
+            <ul class="list-disc px-4 *:mt-3">
+                <li><span class="font-semibold">Bước 1:</span> Truy cập trang web của nhà cái bằng cách sử dụng trình duyệt web của bạn. Đường dẫn liên kết tới nhà cái Hay88: https://hay88x.com.</li>
+                <li><span class="font-semibold">Bước 2:</span> Nhấn Vào Nút “Đăng Ký”. Nút nằm ở phía trên cùng hoặc phía dưới cùng của trang chủ.</li>
+                <li><span class="font-semibold">Bước 3:</span> Điền thông tin cá nhân của bạn như tên, ngày sinh, địa chỉ email, số điện thoại, và mật khẩu. Chắc chắn rằng thông tin của bạn thật là chính xác.</li>
+                <li><span class="font-semibold">Bước 4:</span> Xác nhận lại tài khoản của bạn. Kiểm tra lại thông tin của bạn lại một lần nữa rồi ấn nút “Đăng Ký” hoặc “Submit” để hoàn tất quá trình.</li>
+            </ul>
+            <p class="font-semibold text-gray-600">Đăng nhập Hay88</p>
+            <p>Sau khi đã có tài khoản Hay88, để đăng nhập và bắt đầu trải nghiệm các dịch vụ cá cược, người chơi cần làm theo các bước sau:</p>
+            <ul class="list-disc px-4 *:mt-3">
+                <li><span class="font-semibold">Bước 1:</span> Truy cập trang web của nhà cái bằng cách sử dụng trình duyệt web của bạn. Đường dẫn liên kết tới nhà cái Hay88: https://hay88x.com.</li>
+                <li><span class="font-semibold">Bước 2:</span> Nhấn Vào Nút “Đăng Nhập”. Nút nằm ở phía trên cùng hoặc phía dưới cùng của trang chủ.</li>
+                <li><span class="font-semibold">Bước 3:</span> Nhập đúng tên tài khoản và mật khẩu mà bạn đã đăng kí trước đó. Người chơi phải  bảo mật thông tin tuyệt đối không tự ý chia sẻ cho người khác.</li>
+                <li><span class="font-semibold">Bước 4:</span> Tiến hành tham gia vào Hay88 và chọn sảnh Nổ hủ Hay88.</li>
+            </ul>
+            <span class="text-2xl text-gray-600 font-bold">Top game đứng đầu tại Nổ hủ Hay88</span>
+            <div class="flex justify-center items-center"><img src="./images/pic5.jpg"></div>
+            <p class="font-semibold text-gray-600">Fortune toad</p>
+            <p>Trong trò chơi này người chơi sẽ hóa thân thành thợ săn săn lùng những chú ếch thu về chiến lợi phẩm cho mình. Điều đặc biệt đó là phần thưởng sẽ được tăng cao gấp đôi hay gấp ba thậm chí nhiều lần so với lần cược ban đầu.</p>
+            <p class="font-semibold text-gray-600">Maya Quest</p>
+            <p>Khám phá những bí mật tại vùng đất Maya cổ đại. Người chơi sẽ tham gia cuộc phiêu lưu này đem đến những trải nghiệm vô cùng thú vị. </p>
+            <span class="text-2xl text-gray-600 font-bold">Bài học kinh nghiệm để chiến thắng</span>
+            <div class="flex justify-center items-center"><img src="./images/pic6.jpg"></div>
+            <p class="font-semibold text-gray-600">Để ý thời gian</p>
+            <p>Việc lựa chọn thời điểm phù hợp là quan trọng đối với người chơi tại Nổ hủ Hay88. Sáng sớm hoặc tối muộn là những khoảng thời gian hợp lý để tham gia tăng cơ hội nhận thưởng từ máy nổ hũ.</p>
+            <p class="font-semibold text-gray-600">Tăng tốc độ quay </p>
+            <p>Chiến thuật thông minh trong nổ hũ Hay88, nhiều người chơi áp dụng cách này và đạt được lợi nhuận mong muốn. Ở vòng cược đầu, người chơi không nên quay quá nhiều mà nên khám phá việc quay ở một tốc độ chậm ban đầu. </p>
+            <p>Mục tiêu rõ ràng</p>
+            <p>Đây là việc cần thiết mà bạn nên làm. Hãy đặt riêng cho mình một mức cụ thể để dễ dàng kiếm lợi về cho mình.</p>
+            <span class="text-2xl text-gray-600 font-bold">Kết luận</span>
+            <p><a href="#" class="font-semibold text-gray-600">Nổ hủ Hay88</a> luôn là lựa chọn tối ưu dành cho bạn. Với những kinh nghiệm cùng với ưu điểm nổi trội ở bài viết trên. Hy vọng bạn sẽ luôn đồng hành cùng với Nổ hủ Hay88. Hãy tham gia ngay để trải nghiệm những con game siêu hấp dẫn có ở đây.</p>
+        </div>
+        
+    </div>
+    
+    <!-- click to top -->
+    <button onclick="topScroll()" title="Go to top"><ion-icon name="chevron-up-circle-outline" class="fixed bottom-5 right-5 z-50 text-5xl text-yellow-500"></ion-icon></button>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="mt-10 bg-[#292e3b] py-10 p-4">
+            <div class="max-w-[1080px] m-auto  text-gray-200">
+                <div class=""><img src="./images/doitac.webp"></div>
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5 border-t border-gray-400 mt-10 py-5">
+                    <div class="">
+                        <div class="flex justify-center items-center"><img src="./images/logo.png" class="w-32"></div>
+                        <p class="mt-5 text-justify"><span class="font-semibold">hay88</span> là một trong những nhà cái uy tín hàng đầu tại châu Á. Với cam kết không ngừng phát triển sản phẩm và dịch vụ, Hay88 xác định vị thế của mình trong lĩnh vực game trực tuyến với 3 ưu điểm vượt trội là: game đa dạng dễ chơi dễ trúng, trả thưởng nhanh xanh chín, khuyến mãi khủng được tung ra hàng ngày.</p>
+                        <div class="mt-5 flex gap-2 text-xl *:w-8 *:h-8 *:border *:rounded-full *:flex *:justify-center *:items-center *:cursor-pointer">
+                            <div class="hover:bg-indigo-600"><ion-icon name="logo-facebook"></ion-icon></div>
+                            <div class="hover:bg-indigo-600"><ion-icon name="logo-twitter"></ion-icon></div>
+                            <div class="hover:bg-red-600"><ion-icon name="logo-pinterest"></ion-icon></div>
+                            <div class="hover:bg-orange-600"><ion-icon name="logo-rss"></ion-icon></div>
+                            <div class="hover:bg-indigo-600"><ion-icon name="logo-linkedin"></ion-icon></div>
+                            <div class="hover:bg-red-600"><ion-icon name="logo-youtube"></ion-icon></div>
+                        </div>
+                    </div>
+                    <!-- HƯỚNG DẪN HAY88 -->
+                    <div class="sm:px-5">
+                        <span class="text-xl font-bold">HƯỚNG DẪN HAY88</span>
+                        <div class="mt-5 *:flex *:items-center *:gap-1 *:py-2 *:border-b *:border-gray-500 *:cursor-pointer *:duration-500">
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Đăng Ký</span>
+                                <span class="text-[8px] px-0.5 bg-red-600 rounded">THỊNH HÀNH</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Đăng Nhập</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Nạp Tiền</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Rút Tiền</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Tải App</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Tin Tức</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HƯỚNG DẪN HAY88 -->
+                    <div class="sm:px-5">
+                        <span class="text-xl font-bold">SẢN PHẨM HAY88</span>
+                        <div class="mt-5 *:flex *:items-center *:gap-1 *:py-2 *:border-b *:border-gray-500 *:cursor-pointer *:duration-500">
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Casino Trực Tuyến</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Poker</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Đá Gà</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Bắn Cá</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Nổ Hủ</span>
+                            </div>
+                            <div class="hover:scale-105">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                <span>Xổ Số</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="*:block tracking-wide leading-7">
+                        <span class="text-xl">LIÊN HỆ</span>
+                        <span class=" mt-8">Địa chỉ: 12 Long Biên, Chương Dương Độ, Hoàn Kiếm, Hà Nội, Việt Nam</span>
+                        <span>Số điện thoại: 0941952487</span>
+                        <span>Email: hay88xcom@gmail.com</span>
+                        <div class="mt-3"><img src="./images/okvip.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-3 bg-[#dd9933] text-gray-300">
+            <span class="block text-center font-semibold"> <span class="font-normal">Copyright 2024 ©</span> Bản quyền HAY88.COM</span>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
